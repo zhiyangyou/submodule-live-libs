@@ -1,0 +1,16 @@
+#libevent pkg-config source file
+
+prefix=/Users/vlad/Projects/mt2/platform/mac/CoronaLiveServer/libevent/../libs
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libevent_openssl
+Description: libevent_openssl adds openssl-based TLS support to libevent
+Version: 2.1.6-beta
+Requires: libevent
+Conflicts:
+Libs: -L${libdir} -levent_openssl
+Libs.private:  -lssl -lcrypto -lz   
+Cflags: -I${includedir} 
+
